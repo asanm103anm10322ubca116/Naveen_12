@@ -1,8 +1,8 @@
-def fact(n):
-   if(n==0):
-      return(1)
-   else:
-      return (n*fact(n-1))
-n=int(input("enter n value"))
-x=fact(n)
-print("x value",x)
+from flask import Flask
+app = Flask('app')
+
+@app.route('/')
+def hello_world():
+  return 'Hello, World!'
+
+app.run(host='0.0.0.0', port=8080)
